@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import { Analytics } from '@vercel/analytics/react';
+import Navbar from './components/Navbar';
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -17,18 +18,19 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   return (
-    <html lang="en">
-      <head>
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
-        <Analytics />
-      </body>
-    </html>
+      <html lang="en">
+          <head>
+              <Meta />
+              <Links />
+          </head>
+          <body>
+              <Navbar />
+              <Outlet />
+              <ScrollRestoration />
+              <Scripts />
+              <LiveReload />
+              <Analytics />
+          </body>
+      </html>
   );
 }
