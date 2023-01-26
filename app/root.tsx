@@ -34,7 +34,10 @@ export default function App() {
             </head>
             <body>
                 <Navbar />
-                <Outlet />
+                <main className="container">
+                    <Outlet />
+                </main>
+                <footer className="container">I'm the footer</footer>
                 <ScrollRestoration />
                 <Scripts />
                 <LiveReload />
