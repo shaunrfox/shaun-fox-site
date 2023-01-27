@@ -1,0 +1,17 @@
+$font-stack: system-ui, sans-serif;
+$primary: green;
+$text-color: #fff;
+$line-height: 1.4;
+
+$steel: #273444;
+
+:root {
+    background-color: $steel;
+    color: $text-color;
+    font-family: $font-stack;
+    line-height: $line-height;
+}
+
+a {
+    color: $primary;
+}

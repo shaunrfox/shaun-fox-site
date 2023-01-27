@@ -1,0 +1,9 @@
+.my-photo {
+  border-radius: 4px;
+  transition: transform 0.2s ease-out;
+}
+.my-photo:hover {
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=photography.css.map */

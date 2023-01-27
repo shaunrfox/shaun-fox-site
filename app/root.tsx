@@ -10,11 +10,13 @@ import {
 import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 
+import globalStyles from './styles/global.css';
+
 export const links: LinksFunction = () => {
     return [
         {
             rel: 'stylesheet',
-            href: 'https://unpkg.com/@picocss/pico@latest/css/pico.min.css'
+            href: globalStyles
         }
     ];
 };
