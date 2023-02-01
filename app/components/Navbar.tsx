@@ -2,10 +2,12 @@ import { Link } from '@remix-run/react';
 
 export default function Navbar() {
     return (
-        <nav className="container">
+        <nav>
             <ul>
                 <li>
-                    <strong>Shaun Fox</strong>
+                    <Link to="/">
+                        <strong>Shaun Fox</strong>
+                    </Link>
                 </li>
             </ul>
             <ul>

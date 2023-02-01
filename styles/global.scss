@@ -3,15 +3,75 @@ $primary: green;
 $text-color: #fff;
 $line-height: 1.4;
 
-$steel: #273444;
 
 :root {
-    background-color: $steel;
+    background-color: #3d3d3d;
     color: $text-color;
     font-family: $font-stack;
     line-height: $line-height;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+}
+
+header {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        background-color: #1d1d1d;
+
+        ul {
+            display: flex;
+        }
+
+        ul li {
+            padding: 1rem;
+        }
+
+        ul li:hover {
+            background-color: #2d2d2d;
+        }
+    }
+}
+
+main {
+    padding: 0 1rem;
+}
+
+footer {
+    background-color: #1d1d1d;
+    padding: 2rem 1rem;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
 a {
-    color: $primary;
+    color: #fff;
 }

@@ -8,12 +8,18 @@ import {
     ScrollRestoration
 } from '@remix-run/react';
 import { Analytics } from '@vercel/analytics/react';
-import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
+import resetStyles from './styles/reset.css';
 import globalStyles from './styles/global.css';
 
 export const links: LinksFunction = () => {
     return [
+        {
+            rel: 'stylesheet',
+            href: resetStyles
+        },
         {
             rel: 'stylesheet',
             href: globalStyles
@@ -35,11 +41,11 @@ export default function App() {
                 <Links />
             </head>
             <body>
-                <Navbar />
+                <Header />
                 <main className="container">
                     <Outlet />
                 </main>
-                <footer className="container">I'm the footer</footer>
+                <Footer />
                 <ScrollRestoration />
                 <Scripts />
                 <LiveReload />

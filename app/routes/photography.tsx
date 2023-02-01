@@ -17,21 +17,25 @@ export default function PhotographyRoute() {
             <section>
                 <div>Insert photos here...</div>
             </section>
-            <div className="grid">
-                <div>
+            <div className="photo-grid">
+                <picture>
                     <img
                         src="https://res.cloudinary.com/setholito/image/upload/v1650167556/unsplash/mj-tangonan-wKfTNWaDYgs-unsplash-cropped.jpg"
                         alt="City of Austin aerial view"
-                        className="my-photo"
                     />
-                </div>
-                <div>
+                </picture>
+                <picture>
                     <img
                         src="https://res.cloudinary.com/setholito/image/upload/v1650167556/unsplash/mj-tangonan-wKfTNWaDYgs-unsplash-cropped.jpg"
                         alt="City of Austin aerial view"
-                        className="my-photo"
                     />
-                </div>
+                </picture>
+                <picture>
+                    <img
+                        src="https://res.cloudinary.com/setholito/image/upload/v1650167556/unsplash/mj-tangonan-wKfTNWaDYgs-unsplash-cropped.jpg"
+                        alt="City of Austin aerial view"
+                    />
+                </picture>
             </div>
         </>
     );
