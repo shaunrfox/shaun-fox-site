@@ -1,38 +1,36 @@
 {
     "private": true,
     "sideEffects": false,
+    "type": "module",
     "scripts": {
-        "build": "run-s \"build:*\"",
-        "build:css": "npm run generate:css -- --style=compressed",
-        "build:remix": "remix build",
-        "dev": "run-p \"dev:*\"",
-        "dev:css": "npm run generate:css -- --watch",
-        "dev:remix": "remix dev",
-        "generate:css": "sass styles/:app/styles/",
+        "build": "remix build",
+        "dev": "concurrently \"npm run sass\" \"remix dev\"",
+        "sass": "sass --watch app/:app/",
         "start": "remix-serve build",
         "typecheck": "tsc"
     },
     "dependencies": {
-        "@remix-run/node": "^1.7.6",
-        "@remix-run/react": "^1.7.6",
-        "@remix-run/vercel": "^1.7.6",
+        "@remix-run/css-bundle": "^2.2.0",
+        "@remix-run/node": "^2.2.0",
+        "@remix-run/react": "^2.2.0",
+        "@remix-run/serve": "^2.2.0",
         "@vercel/analytics": "^0.1.5",
-        "@vercel/node": "^2.7.0",
+        "@vercel/remix": "^2.0.0",
         "npm-run-all": "^4.1.5",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "sass": "^1.57.1"
     },
     "devDependencies": {
-        "@remix-run/dev": "^1.7.6",
-        "@remix-run/eslint-config": "^1.7.6",
-        "@remix-run/serve": "^1.7.6",
+        "@remix-run/dev": "^2.2.0",
+        "@remix-run/eslint-config": "^2.2.0",
         "@types/react": "^18.0.25",
         "@types/react-dom": "^18.0.9",
+        "concurrently": "^8.2.2",
         "eslint": "^8.28.0",
-        "typescript": "^4.9.3"
+        "typescript": "^5.2.2"
     },
     "engines": {
-        "node": ">=14"
+        "node": ">=18.0.0"
     }
 }
