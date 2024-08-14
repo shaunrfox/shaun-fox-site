@@ -3,7 +3,7 @@
     "sideEffects": false,
     "type": "module",
     "scripts": {
-        "build": "remix build",
+        "build": "remix build && remix-serve build",
         "dev:remix": "remix dev",
         "dev:sass": "sass --watch app:app",
         "dev": "concurrently \"npm run dev:sass\" \"npm run dev:remix\"",

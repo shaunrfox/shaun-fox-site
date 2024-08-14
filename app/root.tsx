@@ -21,12 +21,12 @@ export const links: LinksFunction = () => {
     },
     {
       rel: "icon",
-      href: "assets/favicon.ico",
+      href: "/shaun-fox-site/assets/favicon.ico",
       type: "image/x-icon",
     },
     {
       rel: "shortcut icon",
-      href: "assets/favicon.ico",
+      href: "/shaun-fox-site/assets/favicon.ico",
       type: "image/x-icon",
     },
     ...headerLinks(),
@@ -37,11 +37,6 @@ export const links: LinksFunction = () => {
 export const meta: MetaFunction = () => {
   return [{ title: "shaunfox.com" }];
 };
-
-{
-  /* <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon" />
-	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon" /> */
-}
 
 export default function App() {
   return (
