@@ -84,7 +84,6 @@ export function CVComponent({
 }) {
   return (
     <div className="cv-component">
-      <p>{desc}</p>
       <div className="cv-info">
         <span className="cv-title">{title}</span>
         <span>{company}</span>
@@ -92,6 +91,7 @@ export function CVComponent({
           {date} / {location}
         </span>
       </div>
+      <p>{desc}</p>
     </div>
   );
 }
@@ -106,7 +106,7 @@ export default function CVRoute() {
         fugiat Lorem eu ex minim non consequat aliqua quis velit excepteur.
       </p>
       <Rule />
-      <h1>Work</h1>
+      <h2>Work</h2>
       {workJSON.map((job, index) => (
         <CVComponent
           key={index}
@@ -118,7 +118,7 @@ export default function CVRoute() {
         />
       ))}
       <Rule />
-      <h1>Education</h1>
+      <h2>Education</h2>
       {schoolJSON.map((job, index) => (
         <CVComponent
           key={index}

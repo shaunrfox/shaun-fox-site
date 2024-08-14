@@ -39,7 +39,7 @@ export default function Header(): JSX.Element {
 
   useEffect(() => {
     const setLogoHeight = () => {
-      if (logoRef.current) {
+      if (logoRef.current && window.innerWidth > 950) {
         const docHeight =
           Math.max(
             document.body.offsetHeight,
@@ -47,6 +47,8 @@ export default function Header(): JSX.Element {
             document.documentElement.offsetHeight
           ) - 40;
         logoRef.current.style.height = `${docHeight}px`;
+      } else if (logoRef.current) {
+        logoRef.current.style.height = "auto";
       }
     };
 
@@ -60,6 +62,7 @@ export default function Header(): JSX.Element {
       window.removeEventListener("resize", setLogoHeight);
     };
   }, [pathname]);
+
   return (
     <header>
       <div className="header-wrapper">
@@ -71,11 +74,13 @@ export default function Header(): JSX.Element {
           </Link>
         </div>
         <div className="header-content">
-          <div className="name">Shaun Fox</div>
-          <div>Principal Product Designer</div>
-          <span>Austin, Texas</span>
+          <div className="header-text">
+            <div className="name">Shaun Fox</div>
+            <div>Principal Product Designer</div>
+            <span>Austin, Texas</span>
+          </div>
+          <Navbar />
         </div>
-        <Navbar />
       </div>
       <Rule thickness={4} />
     </header>

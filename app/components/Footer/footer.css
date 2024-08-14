@@ -127,8 +127,9 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
-  background-color: #1c1d1f;
+  padding: 0 1.5rem;
   padding-bottom: 2.5rem;
+  background-color: #1c1d1f;
 }
 footer p {
   font-family: "IBM Plex Mono", Andale Mono, monaco, Consolas, Lucida Console, monospace;

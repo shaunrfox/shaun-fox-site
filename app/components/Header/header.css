@@ -127,7 +127,8 @@ header {
   flex-direction: column;
   gap: 2.5rem;
   width: 100%;
-  max-width: 38rem;
+  max-width: 42rem;
+  padding: 0 1.5rem;
   background-color: #1c1d1f;
   color: #71767a;
   font-family: "IBM Plex Mono", Andale Mono, monaco, Consolas, Lucida Console, monospace;
@@ -136,9 +137,36 @@ header {
 header .header-wrapper {
   position: relative;
   display: flex;
-  justify-content: space-between;
+}
+@media (max-width: 950px) {
+  header .header-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  header .header-wrapper {
+    gap: 2.5rem;
+  }
 }
 header .header-content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+@media (max-width: 950px) {
+  header .header-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  header .header-content {
+    gap: 2.5rem;
+  }
+}
+header .header-text {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;

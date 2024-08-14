@@ -23,7 +23,7 @@ body {
 }
 
 main {
-  padding: 0 $space-3;
+  padding: 0 $space-8;
   max-width: $max-width;
   width: 100%;
 }
@@ -107,11 +107,15 @@ a {
 .cv-container {
   display: flex;
   flex-direction: column;
-  gap: $space-11;
+  gap: $space-8;
   padding-top: $space-10;
   padding-bottom: $space-10;
 
-  h1 {
+  @media (max-width: 950px) {
+    gap: $space-10;
+  }
+
+  h2 {
     @extend .ibm-plex-mono-regular;
     font-size: 1rem;
     text-transform: uppercase;
@@ -128,11 +132,30 @@ a {
 }
 
 .cv-info {
+  position: sticky;
+  top: 0;
+  background-color: $gray-90;
+  padding: $space-9 0 $space-4;
   display: flex;
   flex-direction: column;
   gap: $space-2;
   @extend .ibm-plex-mono-regular;
   color: $gray-50;
+  &::after {
+    content: "";
+    width: 100%;
+    height: $space-9;
+    background: linear-gradient(to bottom, $gray-90, transparent);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  @media (max-width: 950px) {
+    padding-top: $space-4;
+  }
 
   .cv-title {
     color: $gray-10;

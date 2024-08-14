@@ -1,19 +1,7 @@
 import { type MetaFunction } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "shaunfox.com" },
-    {
-      name: "description",
-      content:
-        "I'm an experienced Product Designer living in Austin, TX, with my beautiful wife and daughters.",
-    },
-    {
-      name: "keywords",
-      content:
-        "Shaun Fox, Shaun, Sean, Shawn, Fox, Design, Austin, Designer, Principle Product Designer, Product Designer, Lead UX Designer, UX Designer, Portfolio, Web Design, design technologist",
-    },
-  ];
+  return [{ title: "shaunfox.com | Principal Product Designer" }];
 };
 
 export default function Index() {

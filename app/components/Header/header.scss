@@ -6,6 +6,7 @@ header {
   gap: $space-10;
   width: 100%;
   max-width: $max-width;
+  padding: 0 $space-8;
   background-color: $gray-90;
   color: $gray-50;
   font-family: $font-stack-mono;
@@ -14,12 +15,34 @@ header {
   .header-wrapper {
     position: relative;
     display: flex;
-    // flex-direction: column;
-    // gap: $space-10;
-    justify-content: space-between;
+
+    @media (max-width: 950px) {
+      flex-direction: column;
+      gap: $space-8;
+    }
+
+    @media (max-width: 600px) {
+      gap: $space-10;
+    }
   }
 
   .header-content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    @media (max-width: 950px) {
+      flex-direction: column;
+      gap: $space-8;
+    }
+
+    @media (max-width: 600px) {
+      gap: $space-10;
+    }
+  }
+
+  .header-text {
     display: flex;
     flex-direction: column;
     gap: $space-3;
