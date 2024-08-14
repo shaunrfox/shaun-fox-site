@@ -1,0 +1,35 @@
+@use "../../styles/variables" as *;
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-10;
+  padding: 0 $space-8;
+  padding-bottom: $space-10;
+  background-color: $gray-90;
+
+  p {
+    font-family: $font-stack-mono;
+    font-size: 0.8rem;
+    color: $gray-10;
+  }
+
+  .fox-logo {
+    width: 24px;
+    height: 24px;
+    fill: $gray-50;
+    // cursor: pointer;
+
+    // &:hover {
+    //   fill: $gray-10;
+    // }
+  }
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

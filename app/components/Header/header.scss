@@ -1,0 +1,87 @@
+@use "../../styles/variables" as *;
+
+header {
+  display: flex;
+  flex-direction: column;
+  gap: $space-10;
+  width: 100%;
+  max-width: $max-width;
+  padding: 0 $space-8;
+  background-color: $gray-90;
+  color: $gray-50;
+  font-family: $font-stack-mono;
+  margin-top: $space-10;
+
+  .header-wrapper {
+    position: relative;
+    display: flex;
+
+    @media (max-width: 950px) {
+      flex-direction: column;
+      gap: $space-8;
+    }
+
+    @media (max-width: 600px) {
+      gap: $space-10;
+    }
+  }
+
+  .header-content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    @media (max-width: 950px) {
+      flex-direction: column;
+      gap: $space-8;
+    }
+
+    @media (max-width: 600px) {
+      gap: $space-10;
+    }
+  }
+
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    gap: $space-3;
+  }
+
+  .name {
+    @extend .ibm-plex-mono-bold;
+    color: $yellow-60;
+  }
+
+  li {
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    a {
+      display: block;
+      color: $gray-50;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+
+      &:hover {
+        color: $gray-10;
+        border-bottom-color: currentColor;
+      }
+    }
+
+    span {
+      display: block;
+      color: $gray-10;
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      gap: $space-7;
+    }
+  }
+}
