@@ -77,7 +77,7 @@ export default function Header(): JSX.Element {
           <div className="header-text">
             <div className="name">Shaun Fox</div>
             <div>Principal Product Designer</div>
-            <span>Austin, Texas</span>
+            <div>Austin, Texas</div>
           </div>
           <Navbar />
         </div>

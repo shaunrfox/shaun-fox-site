@@ -129,7 +129,7 @@ pre {
   opacity: 1;
 }
 @media (max-width: 950px) {
-  .fox-logo {
+  header .fox-logo {
     animation: zap-reverse 20s infinite;
   }
 }
@@ -190,6 +190,7 @@ header .logo a {
   justify-content: center;
   width: 100%;
   height: auto;
+  background: none;
 }
 header .logo a:hover .fox-logo {
   opacity: 0;

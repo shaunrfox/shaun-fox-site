@@ -16,7 +16,11 @@ export const links: LinksFunction = () => {
 export function Copyright() {
   const currentYear = new Date().getFullYear();
 
-  return <p>Copyright &copy; {currentYear} &ndash; Shaun Fox</p>;
+  return (
+    <p className="copyright">
+      Copyright &copy; {currentYear} &ndash; Shaun Fox
+    </p>
+  );
 }
 
 export default function Footer(): JSX.Element {
@@ -24,8 +28,14 @@ export default function Footer(): JSX.Element {
     <footer>
       <Rule thickness={4} />
       <div className="footer-content">
-        <Copyright />
         <FoxLogo />
+        <div className="footer-links">
+          <a href="mailto:hello@shaunfox.com">Mail</a>
+          <a href="https://www.linkedin.com/in/shaunrfox">LinkedIn</a>
+          <a href="http://codepen.io/shaunrfox/">CodePen</a>
+          <a href="https://github.com/shaunrfox">GitHub</a>
+        </div>
+        <Copyright />
       </div>
     </footer>
   );

@@ -54,7 +54,38 @@ li {
 }
 
 a {
+  @extend .ibm-plex-mono-regular;
   color: $yellow-50;
+  text-decoration: none;
+  background-image: linear-gradient(
+    90deg,
+    rgba($yellow-50, 0.5) 0%,
+    rgba($yellow-50, 0.5) 50%,
+    rgba($yellow-50, 0.5) 100%
+  );
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  transition: background-image 300ms ease-in-out;
+
+  &:hover {
+    animation: squiggle 0.3s infinite;
+    background-image: linear-gradient(
+      90deg,
+      $yellow-50 0%,
+      $yellow-50 50%,
+      $yellow-50 100%
+    );
+  }
+
+  &:focus-visible {
+    animation: squiggle 0.3s infinite;
+    outline-style: solid;
+    outline-color: $pink-60;
+    outline-width: 1px;
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
 }
 
 .rule {

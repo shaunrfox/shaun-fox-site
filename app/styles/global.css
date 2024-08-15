@@ -110,7 +110,7 @@ pre {
   font-style: normal;
 }
 
-.ibm-plex-mono-regular, .cv-container h2, .cv-info {
+.ibm-plex-mono-regular, a, .cv-container h2, .cv-info {
   font-family: "IBM Plex Mono", Andale Mono, monaco, Consolas, Lucida Console, monospace;
   font-weight: 400;
   font-style: normal;
@@ -177,6 +177,24 @@ li {
 
 a {
   color: #f0d444;
+  text-decoration: none;
+  background-image: linear-gradient(90deg, rgba(240, 212, 68, 0.5) 0%, rgba(240, 212, 68, 0.5) 50%, rgba(240, 212, 68, 0.5) 100%);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position-y: 100%;
+  transition: background-image 300ms ease-in-out;
+}
+a:hover {
+  animation: squiggle 0.3s infinite;
+  background-image: linear-gradient(90deg, #f0d444 0%, #f0d444 50%, #f0d444 100%);
+}
+a:focus-visible {
+  animation: squiggle 0.3s infinite;
+  outline-style: solid;
+  outline-color: #f1aaaa;
+  outline-width: 1px;
+  outline-offset: 4px;
+  border-radius: 2px;
 }
 
 .rule {
