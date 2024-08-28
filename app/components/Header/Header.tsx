@@ -26,6 +26,13 @@ export function Navbar() {
           {pathname === "/" ? <span>Home</span> : <Link to="/">Home</Link>}
         </li>
         <li>
+          {pathname === "/services" ? (
+            <span>Services</span>
+          ) : (
+            <Link to="/services">Services</Link>
+          )}
+        </li>
+        <li>
           {pathname === "/cv" ? <span>CV</span> : <Link to="/cv">CV</Link>}
         </li>
       </ul>
@@ -39,7 +46,7 @@ export default function Header(): JSX.Element {
 
   useEffect(() => {
     const setLogoHeight = () => {
-      if (logoRef.current && window.innerWidth > 950) {
+      if (logoRef.current && window.innerWidth > 1100) {
         const docHeight =
           Math.max(
             document.body.offsetHeight,

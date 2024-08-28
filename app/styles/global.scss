@@ -20,13 +20,18 @@ body {
   justify-content: center;
   font-size: 1rem;
   color: $gray-5;
+
+  // set max width for all immediate children
+  > * {
+    max-width: $max-width;
+    width: 100%;
+    padding: 0 $space-10;
+  }
 }
 
-main {
-  padding: 0 $space-8;
-  max-width: $max-width;
-  width: 100%;
-}
+// main {
+//   padding: 0 $space-8;
+// }
 
 h1,
 h2,
@@ -102,11 +107,23 @@ a {
 // Home styles
 .home {
   display: flex;
-  flex-direction: column;
-  gap: $space-8;
+  // flex-direction: column;
+  gap: $space-14;
   padding-top: $space-10;
   padding-bottom: $space-10;
   color: $gray-10;
+
+  .home-main {
+    display: flex;
+    flex-direction: column;
+    gap: $space-8;
+  }
+
+  .home-aside {
+    display: flex;
+    flex-direction: column;
+    gap: $space-8;
+  }
 
   h1 {
     font-size: $space-7;
@@ -142,7 +159,7 @@ a {
   padding-top: $space-10;
   padding-bottom: $space-10;
 
-  @media (max-width: 950px) {
+  @media (max-width: $breakpoint-lg) {
     gap: $space-10;
   }
 
@@ -184,11 +201,90 @@ a {
     z-index: 1;
   }
 
-  @media (max-width: 950px) {
+  @media (max-width: $breakpoint-lg) {
     padding-top: $space-4;
   }
 
   .cv-title {
     color: $gray-10;
+  }
+}
+
+// Services styles
+.services-container {
+  display: flex;
+  flex-direction: column;
+  gap: $space-12;
+  padding-top: $space-10;
+  padding-bottom: $space-10;
+
+  .service {
+    // display: flex;
+    // flex-direction: column;
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: $space-14;
+  }
+
+  .service-header {
+    // display: grid;
+    // grid-template-columns: 0.75fr 1.25fr;
+    display: flex;
+    flex-direction: column;
+    gap: $space-6;
+  }
+
+  h2 {
+    @extend .ibm-plex-mono-regular;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $yellow-60;
+    margin-bottom: $space-4;
+    padding-top: $space-3;
+    // border-top: 1px solid $yellow-60;
+  }
+
+  ul {
+    padding-left: $space-10;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-around;
+    gap: $space-5;
+    padding-left: 0;
+    padding-top: $space-3;
+  }
+
+  li {
+    position: relative;
+    @extend .ibm-plex-mono-regular;
+    font-size: 1rem;
+    line-height: 1.5;
+    // list-style: disc;
+    // list-style-type: "\2937";
+    padding: 0;
+
+    &::before {
+      position: absolute;
+      // top: -0.325rem;
+      left: -1.25rem;
+      content: "\2013";
+      display: inline-block;
+      width: $space-6;
+      height: $space-6;
+      margin-right: $space-2;
+      color: $gray-60;
+    }
+
+    span {
+      white-space: nowrap;
+    }
+  }
+
+  p {
+    font-size: 1.125rem;
+    font-weight: 200;
+    line-height: 1.75;
+    text-wrap: balance;
   }
 }

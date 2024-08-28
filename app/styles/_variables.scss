@@ -64,7 +64,10 @@ $font-stack-serif: "Piazzolla", Book Antiqua, Palatino, Palatino Linotype,
   Palatino LT STD, Georgia, serif;
 $text-color: $gray-5;
 $line-height: 1.5em;
-$max-width: 42rem;
+$max-width: 55rem;
+
+$breakpoint-lg: 68.75rem; // 1100px
+$breakpoint-md: 37.5rem; // 600px
 
 .eczar {
   font-family: $font-stack-serif;

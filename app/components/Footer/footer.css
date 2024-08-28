@@ -127,7 +127,6 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
-  padding: 0 1.5rem;
   padding-bottom: 2.5rem;
   background-color: #1c1d1f;
 }

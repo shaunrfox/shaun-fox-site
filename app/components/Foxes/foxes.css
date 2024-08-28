@@ -128,7 +128,7 @@ pre {
   height: auto;
   opacity: 1;
 }
-@media (max-width: 950px) {
+@media (max-width: 68.75rem) {
   header .fox-logo {
     animation: zap-reverse 20s infinite;
   }
@@ -162,7 +162,7 @@ pre {
   height: auto;
   opacity: 0;
 }
-@media (max-width: 950px) {
+@media (max-width: 68.75rem) {
   .fox-logo-outline,
   .fox-logo-skull {
     animation: zap 20s infinite;
@@ -176,7 +176,7 @@ header .logo {
   padding-top: 0.25rem;
   z-index: 10;
 }
-@media (max-width: 950px) {
+@media (max-width: 68.75rem) {
   header .logo {
     position: relative;
     right: 0;
