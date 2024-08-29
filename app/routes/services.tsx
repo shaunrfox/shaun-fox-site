@@ -6,18 +6,21 @@ export default function ServicesRoute() {
       <div className="callout">
         <p>
           I've been fortunate enough to acquire a diverse set of skills through
-          my various roles, projects, and obsessions.
+          my various roles, projects, and obsessions. Below are some examples of
+          the kinds of work I do.
         </p>
         <p>
           {" "}
-          If you have a problem you think I could help solve,{" "}
+          If you have a problem, <span className="ice">
+            yo, I'll solve it,
+          </span>{" "}
           <a
             href="mailto:hello@shaunfox.com"
             style={{ fontSize: "0.8em", whiteSpace: "nowrap" }}
           >
             please get in touch
-          </a>
-          . I'd love to chat with you about it.
+          </a>{" "}
+          and I'll help you resolve it.
         </p>
       </div>
       <Rule />
@@ -55,7 +58,7 @@ export default function ServicesRoute() {
         </div>
         <p>
           Delivering good design is my bread and butter, but pixel perfection is
-          just the cherry on top. Along with solving the problem at hand, design
+          just the beginning. Along with solving the problem at hand, design
           work should always consider the surrounding context – things like
           relevant history or related research, development constraints,
           usability standards, potential business impact, and the anticipated

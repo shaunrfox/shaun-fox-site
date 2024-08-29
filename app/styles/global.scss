@@ -125,15 +125,43 @@ a {
 }
 
 .callout {
-    display: flex;
-    flex-direction: column;
-    max-width: 550px;
-    gap: $space-6;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  gap: $space-6;
+
+  .ice {
+    position: relative;
+    cursor: pointer;
+    cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👀</text></svg>") 15 15,auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 0;
+      aspect-ratio: 5/4;
+      z-index: 1;
+      background-image: url('/assets/vanilla-ice2.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: height 100ms ease-in-out;
+    }
+
+    &:hover::before {
+      height: 150px;
+      transition: height 100ms ease-in-out;
+    }
   }
+}
 
 ::selection {
   color: $gray-0;
-  background: $yellow-90;
+  background: $pink-80;
 }
 
 // Home styles
