@@ -6,7 +6,7 @@
   height: auto;
   opacity: 1;
 
-  @media (max-width: $breakpoint-lg) {
+  @include breakpoint(large) {
     header & {
       animation: zap-reverse 20s infinite;
     }
@@ -41,7 +41,7 @@
   height: auto;
   opacity: 0;
 
-  @media (max-width: $breakpoint-lg) {
+  @include breakpoint(large) {
     animation: zap 20s infinite;
   }
 }
@@ -54,7 +54,7 @@ header {
     padding-top: $space-3;
     z-index: 10;
 
-    @media (max-width: $breakpoint-lg) {
+    @include breakpoint(large) {
       position: relative;
       right: 0;
     }

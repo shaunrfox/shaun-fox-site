@@ -30,10 +30,16 @@ export default function Footer(): JSX.Element {
       <div className="footer-content">
         <FoxLogo />
         <div className="footer-links">
-          <a href="mailto:hello@shaunfox.com">Mail</a>
-          <a href="https://www.linkedin.com/in/shaunrfox">LinkedIn</a>
-          <a href="http://codepen.io/shaunrfox/">CodePen</a>
-          <a href="https://github.com/shaunrfox">GitHub</a>
+          <Link to="mailto:hello@shaunfox.com">Mail</Link>
+          <Link to="https://www.linkedin.com/in/shaunrfox" target="_blank">
+            LinkedIn
+          </Link>
+          <Link to="http://codepen.io/shaunrfox/" target="_blank">
+            CodePen
+          </Link>
+          <Link to="https://github.com/shaunrfox" target="_blank">
+            GitHub
+          </Link>
         </div>
         <Copyright />
       </div>

@@ -122,6 +122,51 @@ pre {
   font-style: normal;
 }
 
+.breakpoint-tester {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: fit-content;
+  background: #bea41f;
+  color: #000000;
+  font-size: 20px;
+  padding: 10px 15px;
+  z-index: 1001;
+}
+.breakpoint-tester:before {
+  content: "default";
+}
+@media (max-width: 1200px) {
+  .breakpoint-tester:before {
+    content: "extra-large";
+  }
+}
+@media (max-width: 1100px) {
+  .breakpoint-tester:before {
+    content: "large";
+  }
+}
+@media (max-width: 800px) {
+  .breakpoint-tester:before {
+    content: "medium";
+  }
+}
+@media (max-width: 600px) {
+  .breakpoint-tester:before {
+    content: "medium-step";
+  }
+}
+@media (max-width: 400px) {
+  .breakpoint-tester:before {
+    content: "small";
+  }
+}
+@media (max-width: 380px) {
+  .breakpoint-tester:before {
+    content: "dang-small";
+  }
+}
+
 :root {
   background-color: #1c1d1f;
   color: #edeff0;
@@ -169,9 +214,37 @@ h3 {
 
 p,
 li {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.75;
+}
+
+main ul {
+  padding-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.25rem;
+}
+@media (max-width: 600px) {
+  main ul {
+    padding-left: 1.5rem;
+  }
+}
+main ul li {
+  position: relative;
+  list-style: none;
+  padding-left: 0;
+}
+main ul li::before {
+  position: absolute;
+  left: -1.25rem;
+  content: "–";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.125rem;
+  color: #565c65;
 }
 
 a {
@@ -202,6 +275,13 @@ a:focus-visible {
   height: 1px;
 }
 
+.callout {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  gap: 1rem;
+}
+
 ::selection {
   color: #ffffff;
   background: #62540d;
@@ -214,6 +294,12 @@ a:focus-visible {
   padding-bottom: 2.5rem;
   color: #dfe1e2;
 }
+@media (max-width: 800px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .home .home-main {
   display: flex;
   flex-direction: column;
@@ -222,7 +308,19 @@ a:focus-visible {
 .home .home-aside {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  align-items: center;
+  height: fit-content;
+  border-radius: 10px;
+  border: 10px solid #000000;
+  background: #000000;
+  min-width: 150px;
+  max-width: 225px;
+}
+.home .home-aside img {
+  border-radius: 5px;
+}
+.home .home-aside a {
+  margin: 1rem 0 0.75rem;
 }
 .home h1 {
   font-size: 1.25rem;
@@ -234,26 +332,17 @@ a:focus-visible {
   padding-left: 0.25rem;
   color: #f1aaaa;
 }
-.home ul {
-  padding-left: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: -1rem;
-}
-.home li {
-  list-style: disc;
-  padding-left: 0.5rem;
-}
 
 .cv-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1.5rem;
+  width: 100%;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-@media (max-width: 68.75rem) {
+@media (max-width: 1100px) {
   .cv-container {
     gap: 2.5rem;
   }
@@ -264,23 +353,42 @@ a:focus-visible {
   letter-spacing: 0.1em;
   color: #eacb2a;
   margin-bottom: -0.5rem;
+  width: 100%;
+}
+.cv-container .callout p {
+  padding-bottom: 1.75rem;
+}
+@media (max-width: 1100px) {
+  .cv-container .callout p {
+    padding-bottom: 0.5rem;
+  }
 }
 
 .cv-component {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
   gap: 0.75rem;
+}
+@media (max-width: 800px) {
+  .cv-component {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .cv-info {
+  grid-column: 1/-1;
   position: sticky;
   top: 0;
-  background-color: #1c1d1f;
-  padding: 2rem 0 0.5rem;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   gap: 0.125rem;
+  width: 100%;
+  padding: 2rem 0 0.5rem;
+  background-color: #1c1d1f;
   color: #71767a;
+  margin-bottom: 0.5rem;
+  z-index: 1;
 }
 .cv-info::after {
   content: "";
@@ -293,7 +401,7 @@ a:focus-visible {
   right: 0;
   z-index: 1;
 }
-@media (max-width: 68.75rem) {
+@media (max-width: 1100px) {
   .cv-info {
     padding-top: 0.5rem;
   }
@@ -302,9 +410,25 @@ a:focus-visible {
   color: #dfe1e2;
 }
 
+.cv-desc {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.cv-desc p + p, .cv-desc ul + p {
+  margin-top: 1rem;
+}
+@media (max-width: 800px) {
+  .cv-desc {
+    grid-column: 1/-1;
+  }
+}
+
 .services-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 4rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -313,6 +437,16 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 0.75fr 1.25fr;
   gap: 5rem;
+}
+.services-container .service p {
+  text-wrap: balance;
+}
+@media (max-width: 800px) {
+  .services-container .service {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
 }
 .services-container .service-header {
   display: flex;
@@ -328,12 +462,15 @@ a:focus-visible {
   padding-top: 0.25rem;
 }
 .services-container ul {
-  padding-left: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
   padding-left: 0;
-  padding-top: 0.25rem;
+}
+@media (max-width: 800px) {
+  .services-container ul {
+    padding-left: 1.5rem;
+  }
+}
+.services-container ul span {
+  white-space: nowrap;
 }
 .services-container li {
   position: relative;
@@ -358,7 +495,6 @@ a:focus-visible {
   font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.75;
-  text-wrap: balance;
 }
 
 /*# sourceMappingURL=global.css.map */

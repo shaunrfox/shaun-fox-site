@@ -122,6 +122,51 @@ pre {
   font-style: normal;
 }
 
+.breakpoint-tester {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: fit-content;
+  background: #bea41f;
+  color: #000000;
+  font-size: 20px;
+  padding: 10px 15px;
+  z-index: 1001;
+}
+.breakpoint-tester:before {
+  content: "default";
+}
+@media (max-width: 1200px) {
+  .breakpoint-tester:before {
+    content: "extra-large";
+  }
+}
+@media (max-width: 1100px) {
+  .breakpoint-tester:before {
+    content: "large";
+  }
+}
+@media (max-width: 800px) {
+  .breakpoint-tester:before {
+    content: "medium";
+  }
+}
+@media (max-width: 600px) {
+  .breakpoint-tester:before {
+    content: "medium-step";
+  }
+}
+@media (max-width: 400px) {
+  .breakpoint-tester:before {
+    content: "small";
+  }
+}
+@media (max-width: 380px) {
+  .breakpoint-tester:before {
+    content: "dang-small";
+  }
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -135,13 +180,13 @@ header .header-wrapper {
   position: relative;
   display: flex;
 }
-@media (max-width: 68.75rem) {
+@media (max-width: 1100px) {
   header .header-wrapper {
     flex-direction: column;
     gap: 1.5rem;
   }
 }
-@media (max-width: 68.75rem) {
+@media (max-width: 1100px) {
   header .header-wrapper {
     gap: 2.5rem;
   }
@@ -152,7 +197,7 @@ header .header-content {
   width: 100%;
   justify-content: space-between;
 }
-@media (max-width: 37.5rem) {
+@media (max-width: 600px) {
   header .header-content {
     flex-direction: column;
     gap: 2.5rem;

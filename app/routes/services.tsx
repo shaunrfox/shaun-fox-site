@@ -3,6 +3,24 @@ import Rule from "../components/Rule";
 export default function ServicesRoute() {
   return (
     <div className="services-container">
+      <div className="callout">
+        <p>
+          I've been fortunate enough to acquire a diverse set of skills through
+          my various roles, projects, and obsessions.
+        </p>
+        <p>
+          {" "}
+          If you have a problem you think I could help solve,{" "}
+          <a
+            href="mailto:hello@shaunfox.com"
+            style={{ fontSize: "0.8em", whiteSpace: "nowrap" }}
+          >
+            please get in touch
+          </a>
+          . I'd love to chat with you about it.
+        </p>
+      </div>
+      <Rule />
       <div className="service">
         <div className="service-header">
           <h2>Users</h2>
@@ -54,13 +72,16 @@ export default function ServicesRoute() {
               <span>Design Systems</span> + <span>Style Guides</span>
             </li>
             <li>Component libraries</li>
-            <li>UX writing</li>
+            <li>Technical strategy</li>
           </ul>
         </div>
         <p>
           I have a passion for building things that are both beautiful and
-          functional. I love working with developers to ensure that the designs
-          I create are not only beautiful, but also functional and easy to use.
+          functional. I fell in love with coding for the web in 2007, and cut my
+          teeth in the software industry teaching my engineering partners all
+          the CSS tricks I'd learned. I've been fortunate to have a career
+          that's allowed me to combine my love of design with my love of
+          technology.
         </p>
       </div>
       <Rule />
@@ -76,10 +97,12 @@ export default function ServicesRoute() {
           </ul>
         </div>
         <p>
-          Dolore duis amet deserunt sint excepteur proident ipsum magna aliquip
-          deserunt nostrud irure dolore. Fugiat qui mollit sit quis veniam anim
-          adipisicing aliqua elit. Commodo et dolore et. Eu sint officia aute
-          fugiat Lorem eu ex minim non consequat aliqua quis velit excepteur.
+          With my systems-oriented mind, identifying and solving operational
+          problems has been second nature. My focus on users has given me a
+          unique perspective on how to address the issues that teams and
+          organizations face. I understand the importance of clear
+          communication, effective processes, and the variety of motivations and
+          pressures that can make or break a team.
         </p>
       </div>
       <Rule />
@@ -95,10 +118,10 @@ export default function ServicesRoute() {
           </ul>
         </div>
         <p>
-          Dolore duis amet deserunt sint excepteur proident ipsum magna aliquip
-          deserunt nostrud irure dolore. Fugiat qui mollit sit quis veniam anim
-          adipisicing aliqua elit. Commodo et dolore et. Eu sint officia aute
-          fugiat Lorem eu ex minim non consequat aliqua quis velit excepteur.
+          It's incredibly satisfying to help a company identify ways to align
+          their business goals with the needs of their users. Building customer
+          satisfaction into strategic planning and having the right metrics to
+          measure success are the keys to doing this well.
         </p>
       </div>
     </div>

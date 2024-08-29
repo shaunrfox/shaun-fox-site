@@ -16,12 +16,12 @@ header {
     position: relative;
     display: flex;
 
-    @media (max-width: $breakpoint-lg) {
+    @include breakpoint(large) {
       flex-direction: column;
       gap: $space-8;
     }
 
-    @media (max-width: $breakpoint-lg) {
+    @include breakpoint(large) {
       gap: $space-10;
     }
   }
@@ -32,11 +32,11 @@ header {
     width: 100%;
     justify-content: space-between;
 
-    // @media (max-width: $breakpoint-lg) {
+    // @include breakpoint(large) {
     //   gap: $space-8;
     // }
-    
-    @media (max-width: $breakpoint-md) {
+
+    @include breakpoint(medium-step) {
       flex-direction: column;
       gap: $space-10;
     }

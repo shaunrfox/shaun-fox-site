@@ -1,4 +1,5 @@
 import { type MetaFunction } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [{ title: "shaunfox.com | Principal Product Designer" }];
@@ -12,9 +13,9 @@ export default function Index() {
           Howdy, I'm Shaun <span>👋</span>
         </h1>
         <p>
-          I'm a designer, technologist, and strategist living in Austin, Texas,
-          with my beautiful wife and daughters. I've worked with a variety of
-          companies in the design and technology space for over 15 years.
+          I'm a designer and technologist living in Austin, Texas, with my
+          beautiful wife and daughters. I've worked with a variety of companies
+          in the design and technology space for over 15 years.
         </p>
         <p>
           My natural curiosity and love for learning has allowed me to acquire
@@ -31,20 +32,16 @@ export default function Index() {
           of a direction.
         </p>
         <p>
-          I'm currently taking on new clients. If you have a problem you think I
-          could help solve or a gap on your team, I'd love to chat with you
-          about it.
-        </p>
-        <p>
-          <a href="mailto:hello@shaunfox.com">hello@shaunfox.com</a>
+          <span style={{ color: "#f1aaaa", fontStyle: "italic" }}>
+            I'm currently taking on new clients.
+          </span>{" "}
+          If you have a problem you think I could help solve or a gap on your
+          team, I'd love to chat with you about it.
         </p>
       </div>
       <div className="home-aside">
-        <img
-          src="/assets/shaun-photo-2.jpg"
-          alt="Shaun Fox"
-          style={{ borderRadius: "5px", border: "5px solid #000000" }}
-        />
+        <img src="/assets/shaun-photo-2.jpg" alt="Shaun Fox" />
+        <a href="mailto:hello@shaunfox.com">hello@shaunfox.com</a>
       </div>
     </div>
   );
