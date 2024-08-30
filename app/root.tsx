@@ -35,7 +35,7 @@ export const links: LinksFunction = () => {
 };
 
 export const meta: MetaFunction = () => {
-  return [{ title: "shaunfox.com" }];
+  return [{ title: "okshaun.com" }];
 };
 
 export default function App() {
