@@ -21,12 +21,12 @@ export const links: LinksFunction = () => {
     },
     {
       rel: "icon",
-      href: "/shaun-fox-site/assets/favicon.ico",
+      href: "/assets/favicon.ico",
       type: "image/x-icon",
     },
     {
       rel: "shortcut icon",
-      href: "/shaun-fox-site/assets/favicon.ico",
+      href: "/assets/favicon.ico",
       type: "image/x-icon",
     },
     ...headerLinks(),
